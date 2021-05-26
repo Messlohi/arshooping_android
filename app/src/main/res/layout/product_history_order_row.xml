@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/tools"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:outlineAmbientShadowColor="@color/red"
+        android:layout_marginBottom="10dp"
+        android:elevation="10dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.0px"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        card_view:cardElevation="10dp"
+        android:background="@color/white"
+        card_view:cardPreventCornerOverlap="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/ll_container_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_margin="10dp"
+                android:id="@+id/iv_product"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/bg_image_product_basket"
+                android:src="@color/white"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_title"
+                app:layout_constraintHorizontal_bias="0.126"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.488" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/iv_product"
+                    android:fontFamily="@font/rubik"
+                    android:text="title product"
+                    android:textColor="@color/black"
+                    card_view:layout_editor_absoluteX="127dp"
+                    card_view:layout_editor_absoluteY="26dp" />
+
+
+                <TextView
+                    android:id="@+id/tv_price_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="150 Dh"
+                    android:textColor="@color/black"
+                    card_view:layout_editor_absoluteX="123dp"
+                    card_view:layout_editor_absoluteY="55dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bnt_see_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="Voir plus "
+                        android:textColor="@color/holo_blue_light"
+                        android:textSize="10dp"
+                        card_view:layout_editor_absoluteX="159dp"
+                        card_view:layout_editor_absoluteY="87dp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_other_prodcuts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="et 10 autre produits " />
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_date_order"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="commandé le :" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_deatail_orderh"
+            android:background="#F2F2F2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                >
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_orderh_products"
+                    android:layout_width="match_parent"
+                    android:background="#F2F2F2"
+                    android:layout_height="100dp"
+                    android:layout_gravity="fill"
+                    android:layout_above="@+id/cl_bottom"
+                    android:layout_below="@+id/constraintLayout"
+                    android:layout_marginTop="42dp"
+                    android:layout_marginBottom="33dp"
+                    card_view:itemCount="5"
+                    tools:listitem="@layout/view_product_orderhistory_row" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="right"
+                >
+                <Button
+                    android:id="@+id/btn_comm_orderhits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Commander"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+

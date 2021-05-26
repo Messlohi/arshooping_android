@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#F2F2F2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settings_activities.AllUserSetingsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/rcl_eturn"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="11dp"
+        android:useDefaultMargins="true"
+        android:columnCount="2">
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:card_view="http://schemas.android.com/tools"
+            android:id="@+id/vide_card"
+            android:outlineAmbientShadowColor="@color/red"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0px"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            app:cardCornerRadius="20dp"
+            card_view:cardElevation="10dp"
+            card_view:cardPreventCornerOverlap="false"
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/icon_setting"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/video"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/rubik_medium"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
+                    android:text="Mes vidéos "/>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:card_view="http://schemas.android.com/tools"
+            android:outlineAmbientShadowColor="@color/red"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:id="@+id/coll_card"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0px"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            app:cardCornerRadius="20dp"
+            card_view:cardElevation="10dp"
+            card_view:cardPreventCornerOverlap="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/collection"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/rubik_medium"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
+                    android:text="Mes Collection "/>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:card_view="http://schemas.android.com/tools"
+            android:outlineAmbientShadowColor="@color/red"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:id="@+id/achat_card"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0px"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            app:cardCornerRadius="20dp"
+            card_view:cardElevation="10dp"
+            android:layout_gravity="fill"
+            card_view:cardPreventCornerOverlap="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/shopping_bag"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/rubik_medium"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
+                    android:text="Historique d'achat "/>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:card_view="http://schemas.android.com/tools"
+            android:outlineAmbientShadowColor="@color/red"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:id="@+id/card_deconn"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0px"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            app:cardCornerRadius="20dp"
+            card_view:cardElevation="10dp"
+            android:layout_gravity="fill"
+            card_view:cardPreventCornerOverlap="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/collection"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/rubik_medium"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
+                    android:text="Déconncxion "/>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+
+
+
+
+</LinearLayout>

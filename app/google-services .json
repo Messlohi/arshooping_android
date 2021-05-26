@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "66901747141",
+    "project_id": "ar-eshoopi",
+    "storage_bucket": "ar-eshoopi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66901747141:android:bf8aba22b233d67ac157ac",
+        "android_client_info": {
+          "package_name": "com.ensaf.arshopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66901747141-vp2nbevcd49kvh8hqrmk1u8d7647c3hp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ensaf.arshopping",
+            "certificate_hash": "4fa895bda98b4e9c47cc4d382ed0e0529fc4c3dc"
+          }
+        },
+        {
+          "client_id": "66901747141-u78g3ijnkogrde6o2qbhv9rtcblcm333.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb_7jVqRC2cTA0JjwuawEpRnqz3QqCzuE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66901747141-u78g3ijnkogrde6o2qbhv9rtcblcm333.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

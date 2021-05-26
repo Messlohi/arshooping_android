@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.Light.SearchView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/appcolor</item>
+<!--        <item name="android:background">#1D00AD9C</item>-->
+    </style>
+
+
+    <style name="MySearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!--        &lt;!&ndash; Background for the search query section (e.g. EditText) &ndash;&gt;-->
+        <!--        <item name="queryBackground">...</item>-->
+        <!--        &lt;!&ndash; Background for the actions section (e.g. voice, submit) &ndash;&gt;-->
+        <!--        <item name="submitBackground">...</item>-->
+        <!--        &lt;!&ndash; Close button icon &ndash;&gt;-->
+        <!--        <item name="closeIcon">...</item>-->
+        <!--        &lt;!&ndash; Search button icon &ndash;&gt;-->
+        <!--        <item name="searchIcon">...</item>-->
+        <!--        &lt;!&ndash; Go/commit button icon &ndash;&gt;-->
+        <!--        <item name="goIcon">...</item>-->
+        <!--        &lt;!&ndash; Voice search button icon &ndash;&gt;-->
+        <!--        <item name="voiceIcon">...</item>-->
+        <!--        &lt;!&ndash; Commit icon shown in the query suggestion row &ndash;&gt;-->
+        <!--        <item name="commitIcon">...</item>-->
+        <!--        &lt;!&ndash; Layout for query suggestion rows &ndash;&gt;-->
+        <!--        <item name="suggestionRowLayout">...</item>-->
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="ContentImageBadgeTitle" parent="AppTheme">
+        <item name="android:alpha">0.5</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="ContentImageBadgeText" parent="AppTheme">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="ContentMainBadgeTitle" parent="AppTheme">
+        <item name="android:textColor">@color/contentBadgeTitle</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="TitleBadgeText" parent="AppTheme">
+        <item name="android:textColor">@color/titleBadgeText</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="TitleBadgeTitle" parent="AppTheme">
+        <item name="android:textColor">@color/titleBadgeTitle</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+</resources>
