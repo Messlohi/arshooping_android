@@ -70,10 +70,10 @@ dependencies {
     implementation "com.furkanakdemir:surroundcardview:1.0.1"
     implementation 'com.github.jrizani:JRSpinner:1.0.0'
 
-    implementation 'com.stripe:stripe-android:16.8.0'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.squareup.okhttp3:okhttp:4.9.0'
 
 
+    implementation 'com.stripe:stripe-android:16.8.0'
 
 }

@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final double MIN_OPENGL_VERSION = 3.0;
     static  public  boolean beginSimaltion = false;
-   //For RecylerViews
+    //For RecylerViews
     RecyclerView productCatRecycler;
     static RecyclerView prodItemRecycler;
     ProductCategoryAdapter productCategoryAdapter;
@@ -297,10 +297,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private  void sendToLogin(){
-            Intent intent = new Intent(this, LoginActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-            finish();
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 
     public static String getCurrentTime(){
@@ -317,68 +317,68 @@ public class MainActivity extends AppCompatActivity {
     private  void filterProduct(String catego,float min ,float max){
         searchedFiltredProducts = new ArrayList<>();
         if(catego.equals("Tous")){
-                productRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                        for(DataSnapshot ds :snapshot.getChildren()){
-                            GenericTypeIndicator<HashMap<String, Products>> to = new
-                                    GenericTypeIndicator<HashMap<String, Products>>() {};
-                            HashMap<String, Products> model = ds.getValue(to);
-                            for(String key : model.keySet()){
-                                Products product = model.get(key);
-                                float price = Float.parseFloat(product.getPrice());
-                                if(max ==0 && price>=min) searchedFiltredProducts.add(product);
-                                if(max!=0 && price>=min && price<=max) searchedFiltredProducts.add(product);
-                            }
-                        }
-
-                        if(searchedFiltredProducts.size() !=0){
-                            noresult.setVisibility(View.GONE);
-                            prodItemRecycler.setVisibility(View.VISIBLE);
-                            productsList.clear();
-                            productsList.addAll(searchedFiltredProducts);
-                            productAdapter.notifyDataSetChanged();
-                        }else {
-                            noresult.setVisibility(View.VISIBLE);
-                            prodItemRecycler.setVisibility(View.GONE);
+            productRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                    for(DataSnapshot ds :snapshot.getChildren()){
+                        GenericTypeIndicator<HashMap<String, Products>> to = new
+                                GenericTypeIndicator<HashMap<String, Products>>() {};
+                        HashMap<String, Products> model = ds.getValue(to);
+                        for(String key : model.keySet()){
+                            Products product = model.get(key);
+                            float price = Float.parseFloat(product.getPrice());
+                            if(max ==0 && price>=min) searchedFiltredProducts.add(product);
+                            if(max!=0 && price>=min && price<=max) searchedFiltredProducts.add(product);
                         }
                     }
 
-                    @Override
-                    public void onCancelled(@NonNull @NotNull DatabaseError error) {
+                    if(searchedFiltredProducts.size() !=0){
+                        noresult.setVisibility(View.GONE);
+                        prodItemRecycler.setVisibility(View.VISIBLE);
+                        productsList.clear();
+                        productsList.addAll(searchedFiltredProducts);
+                        productAdapter.notifyDataSetChanged();
+                    }else {
+                        noresult.setVisibility(View.VISIBLE);
+                        prodItemRecycler.setVisibility(View.GONE);
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull @NotNull DatabaseError error) {
+
+                }
+            });
+        }else {
+            productRef.child(catego).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                    for(DataSnapshot ds :snapshot.getChildren()){
+                        Products product = ds.getValue(Products.class);
+                        float price = Float.parseFloat(product.getPrice());
+                        if(max ==0 && price>=min) searchedFiltredProducts.add(product);
+                        if(max!=0 && price>=min && price<=max) searchedFiltredProducts.add(product);
 
                     }
-                });
-            }else {
-                productRef.child(catego).addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                        for(DataSnapshot ds :snapshot.getChildren()){
-                            Products product = ds.getValue(Products.class);
-                                float price = Float.parseFloat(product.getPrice());
-                                if(max ==0 && price>=min) searchedFiltredProducts.add(product);
-                                if(max!=0 && price>=min && price<=max) searchedFiltredProducts.add(product);
 
-                        }
-
-                        if(searchedFiltredProducts.size() !=0){
-                            noresult.setVisibility(View.GONE);
-                            prodItemRecycler.setVisibility(View.VISIBLE);
-                            productsList.clear();
-                            productsList.addAll(searchedFiltredProducts);
-                            productAdapter.notifyDataSetChanged();
-                        }else {
-                            noresult.setVisibility(View.VISIBLE);
-                            prodItemRecycler.setVisibility(View.GONE);
-                        }
+                    if(searchedFiltredProducts.size() !=0){
+                        noresult.setVisibility(View.GONE);
+                        prodItemRecycler.setVisibility(View.VISIBLE);
+                        productsList.clear();
+                        productsList.addAll(searchedFiltredProducts);
+                        productAdapter.notifyDataSetChanged();
+                    }else {
+                        noresult.setVisibility(View.VISIBLE);
+                        prodItemRecycler.setVisibility(View.GONE);
                     }
+                }
 
-                    @Override
-                    public void onCancelled(@NonNull @NotNull DatabaseError error) {
+                @Override
+                public void onCancelled(@NonNull @NotNull DatabaseError error) {
 
-                    }
-                });
-            }
+                }
+            });
+        }
 
     }
 
@@ -487,7 +487,7 @@ public class MainActivity extends AppCompatActivity {
                     ProductCategory productCategory = new ProductCategory(1,snapshot.getValue().toString());
                     productCategoryList.add(productCategory);
                     if(productCategoryAdapter != null)
-                    productCategoryAdapter.notifyDataSetChanged();
+                        productCategoryAdapter.notifyDataSetChanged();
                 }
             }
 

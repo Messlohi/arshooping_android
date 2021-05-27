@@ -9,130 +9,104 @@
 
     <!-- LEFT TITLE PART -->
     <RelativeLayout
-        android:layout_width="100dp"
-        android:layout_height="155dp"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
         android:layout_weight="3"
         android:background="@color/bgTitleLeft"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:paddingBottom="20dp"
         android:paddingLeft="10dp"
+        android:paddingTop="20dp"
         android:paddingRight="10dp"
-        android:paddingTop="20dp">
-    </RelativeLayout>
+        android:paddingBottom="20dp"></RelativeLayout>
     <!-- RIGHT TITLE PART -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="70dp"
         android:layout_weight="1"
-        android:background="@color/bgTitleRight"
-        android:paddingBottom="20dp"
-        android:paddingEnd="20dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="20dp"
-        android:paddingStart="15dp"
-        android:paddingTop="20dp">
+        android:background="@color/bgTitleRight">
+
 
         <TextView
             android:id="@+id/tv_title_collection"
-            android:layout_width="match_parent"
+            android:layout_width="222dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/roboto_medium"
             android:text="title Collection"
-            android:ellipsize="marquee"/>
+            android:textSize="23sp" />
 
-        <TextView
-            android:id="@+id/title_from_address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-5dp"
-            android:ellipsize="marquee"
-            android:fadingEdge="horizontal"
-            android:singleLine="true"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-
-        <ImageView
-            android:id="@+id/title_from_to_dots_divider"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@id/title_from_address"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="5dp"
-            android:src="@color/contentDividerLine" />
-
-        <TextView
-            android:id="@+id/title_to_address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/title_from_to_dots_divider"
-            android:ellipsize="marquee"
-            android:fadingEdge="horizontal"
-            android:singleLine="true"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-
-
+<!--        <ImageView-->
+<!--            android:id="@+id/title_from_to_dots_divider"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:layout_marginTop="34dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:src="@color/contentDividerLine" />-->
         <TextView
             android:id="@+id/title_requests_count"
             style="@style/TitleBadgeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true" />
 
-        <TextView
-            style="@style/TitleBadgeTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/title_requests_count"
-            android:layout_alignLeft="@id/title_requests_count"
-            android:layout_alignStart="@id/title_requests_count"
-            android:text="ENREGITRER LE" />
-
-
-        <TextView
-            android:id="@+id/tv_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/title_requests_count"
-            android:layout_alignStart="@id/title_requests_count"
-            android:layout_alignLeft="@id/title_requests_count"
-            android:layout_marginStart="-1dp"
-            android:layout_marginLeft="-1dp"
-            android:layout_marginBottom="-23dp"
-            android:text="01/01/2016" />
-
-        <TextView
-            android:id="@+id/tv_nbCollection"
-            android:layout_width="152dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/title_requests_count"
-            android:gravity="left"
-            android:layout_marginStart="214dp"
-            android:layout_marginLeft="214dp"
-            android:layout_marginBottom="-25dp"
-            android:text="0" />
-
-        <TextView
-            android:id="@+id/tv_nbCollection2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            style="@style/TitleBadgeTitle"
-            android:layout_width="65dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="28dp"
-            android:layout_above="@id/tv_nbCollection2"
-            android:layout_alignStart="@id/tv_nbCollection2"
-            android:layout_alignLeft="@id/tv_nbCollection2"
-            android:layout_marginStart="76dp"
-            android:layout_marginLeft="76dp"
-            android:layout_marginBottom="-5dp"
-            android:text="NOMBRE" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:paddingLeft="0dp"
 
+            android:layout_marginBottom="5dp"
+            android:background="@color/bgContent"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/tv_nbCollection"
+                style="@style/TitleBadgeTitle"
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_title_collection"
+                android:layout_alignLeft="@id/title_requests_count"
+                android:layout_weight="2"
+                android:drawableStart="@drawable/ic_baseline_view_list_24"
+                android:fontFamily="@font/roboto_medium"
+                android:maxWidth="65dp"
+                android:padding="4dp"
+                android:text="5 produits"
+                android:textSize="13sp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_gravity="end"
+                >
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    style="@style/TitleBadgeTitle"
+                    android:layout_width="65dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv_title_collection"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_baseline_date_range_24"
+                    android:drawablePadding="3dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:maxWidth="65dp"
+                    android:padding="5dp"
+                    android:text="5 mars 2020"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

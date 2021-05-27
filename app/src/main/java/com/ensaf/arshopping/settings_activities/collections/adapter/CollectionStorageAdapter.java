@@ -14,6 +14,7 @@ import com.ensaf.arshopping.R;
 import com.ensaf.arshopping.settings_activities.collections.model.Collection;
 import com.ensaf.arshopping.settings_activities.collections.ShowDetailCollectionActivity;
 
+import java.text.DateFormat;
 import java.util.List;
 
 public class CollectionStorageAdapter extends RecyclerView.Adapter<CollectionStorageAdapter.ProductViewHolder> {
@@ -40,7 +41,7 @@ public class CollectionStorageAdapter extends RecyclerView.Adapter<CollectionSto
         Collection collection = collections.get(position);
 
         holder.title.setText(collection.getName());
-        holder.date.setText(collection.getDate());
+        holder.date.setText(DateFormat.getDateInstance(DateFormat.MEDIUM).format(collection.getDate()));
         holder.nbCollTV.setText(collection.getNbProduit()+" Produits");
         holder.itemView.setOnClickListener(view -> {
             Intent intent = new Intent(context, ShowDetailCollectionActivity.class);
